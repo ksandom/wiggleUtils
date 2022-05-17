@@ -9,10 +9,12 @@ $fileType="pngs";
 
 // Files to load.
 $inFiles=array("wiggle-L.".$fileType, "wiggle-R.".$fileType);
+
+// How many frames to take from a file, before switching to the next file. The files are advanced together. So frames not taken from a given file are simply skipped.
 $framesPerTurn=5;
 
 // File to create.
-$outFile="wiggle-combined.".$fileType;
+$outFile="wiggle-combined-$framesPerTurn.".$fileType;
 
 // When we see this line, we assume that we are finishing the header.
 $beginLine="# List of image files follows";
